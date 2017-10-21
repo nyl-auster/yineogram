@@ -3,6 +3,14 @@
 // 1. the action 
 // 2. copy of current state
 
-export default function posts(state = [], action) {
+export default function posts (state = [], action) {
+  switch (action.type) {
+    case 'INCREMENT_LIKES':
+      const newState = state.slice()
+      newState[action.index].likes++
+      return newState
+    default:
+      return state
+  }
   return state
 }
