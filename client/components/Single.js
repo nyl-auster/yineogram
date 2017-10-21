@@ -8,7 +8,7 @@ class Single extends React.Component {
     const postId = this.props.params.postId
     const index = this.props.posts.findIndex(post => post.code === postId)
     const post = this.props.posts[index]
-    const comments = this.props.comments[post.code]
+    const comments = this.props.comments[post.code] || []
     return (
       <div className="single-photo">
         <Photo {...this.props} post={post} index={index} />

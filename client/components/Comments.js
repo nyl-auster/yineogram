@@ -5,11 +5,12 @@ class Comments extends React.Component {
   render () {
     const { comments } = this.props
     return (
-      <div className="comment">
+      <div className="comments">
         {comments && comments.map((comment, index) => (
-          <div key={index}>
+          <div className="comment" key={index}>
+            <p><strong>{comment.user}</strong></p> 
             {comment.text}
-            {comment.user}
+            <button className="remove-comment">&times;</button>
           </div>
         ))}
       </div>
