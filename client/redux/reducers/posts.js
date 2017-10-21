@@ -1,8 +1,7 @@
 // a reducer takes in two things:
 
 // 1. the action 
-// 2. copy of current state
-
+// 2. copy of current fragrement (or whole) state
 export default function posts (state = [], action) {
   switch (action.type) {
     case 'INCREMENT_LIKES':
