@@ -13,6 +13,11 @@ class Comments extends React.Component {
             <button className="remove-comment">&times;</button>
           </div>
         ))}
+        <form ref="comments" className="comment-form">
+          <input type="text" ref="author" placeholder="author"/>
+          <input type="text" ref="comment" placeholder="comment"/>
+          <input type="submit" hidden/>
+        </form>
       </div>
     )
   }
