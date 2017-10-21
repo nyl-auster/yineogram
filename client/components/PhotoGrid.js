@@ -1,11 +1,14 @@
 import React from 'react'
+import Photo from './Photo'
 
 class PhotoGrid extends React.Component {
 
-  render() {
+  render () {
     return (
       <div className="photo-grid">
-      I am the photo grid
+        {this.props.posts.map(post => (
+          <Photo key={post.id} post={post} />
+        ))}
       </div>
     )
   }
